@@ -1,19 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function MovieCard({ movie }) {
   return (
-    <div className="movie-card">
-      <div
-        className="movie-poster"
-        style={{
-          backgroundImage: `url(${movie.poster})`
-        }}
-      />
-      <div className="movie-info">
-        <h2>{movie.title}</h2>
-        <p>Release Date: {movie.releaseDate}</p>
-      </div>
-    </div>
+    <Link
+      to={`/movies/${encodeURIComponent(movie.title)}`}
+      className="movie-card"
+    >
+      <h3>{movie.title}</h3>
+      <p>Release Date: {movie.releaseDate}</p>
+    </Link>
   );
 }
 

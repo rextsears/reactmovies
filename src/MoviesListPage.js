@@ -1,13 +1,24 @@
-import React, { useState } from "react";
-import MovieGrid from "./MovieGrid";
+import React from "react";
+import { Link } from "react-router-dom";
 
-function MoviesListPage({ onLogin }) {
+function NavBar({ user }) {
   return (
-    <div className="movies-list">
-      <h2>Movies</h2>
-      <MovieGrid /> {/* Render the MovieGrid component */}
-    </div>
+    <nav>
+      <ul className="nav-horizontal">
+        <li>
+          <Link to="/movies" className="nav-link">
+            Movies
+          </Link>
+        </li>
+        <li>
+          <Link to="/actors" className="nav-link">
+            Actors
+          </Link>
+        </li>
+        {user && <li>Welcome, {user}!</li>}
+      </ul>
+    </nav>
   );
 }
 
-export default MoviesListPage;
+export default NavBar;
