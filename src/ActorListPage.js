@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./styles.css"; // Update the filename to index.css
+import "/public/styles.css"; // Update the filename to index.css
 import {
   BrowserRouter as Router,
   Routes,

@@ -1,0 +1,27 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .nav-horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .nav-horizontal li {
+    margin-right: 20px; /* Add spacing between links */
+  }
+  
+  .nav-horizontal a {
+    text-decoration: none;
+    color: #333; /* Adjust the color as needed */
+  }
+  
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Spacing between movie cards */
+  }
+  
